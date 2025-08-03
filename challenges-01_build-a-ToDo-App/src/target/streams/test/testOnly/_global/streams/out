@@ -1,0 +1,10 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TodoCLISpec, org.scalatest.tools.Framework$$anon$1@2bafdb10, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTodoCLISpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTodoCLI[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate with TodoManager correctly for add command (72 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate correctly for list command with empty task list (4 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate correctly for add and list commands (18 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate correctly for complete command (4 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate correctly for delete command (7 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should integrate correctly for incomplete command (8 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle command parsing correctly (4 milliseconds)[0m[0m

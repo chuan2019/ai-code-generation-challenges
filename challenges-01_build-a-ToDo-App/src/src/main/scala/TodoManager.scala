@@ -5,9 +5,9 @@ import java.io.{File, PrintWriter}
 import scala.io.Source
 import scala.util.{Try, Success, Failure}
 
-class TodoManager {
+class TodoManager(dataFileName: String = "tasks.txt") {
   private val tasks = ListBuffer[Task]()
-  private val dataFile = "tasks.txt"
+  private val dataFile = dataFileName
   
   // Load tasks from file on initialization
   loadTasks()
