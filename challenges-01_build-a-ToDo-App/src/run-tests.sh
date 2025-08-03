@@ -62,7 +62,7 @@ case "${1:-all}" in
         ;;
     "coverage")
         echo "Running tests with coverage report..."
-        if ! sbt plugins | grep -q "sbt-scoverage"; then
+        if ! grep -q "sbt-scoverage" ../project/plugins.sbt 2>/dev/null; then
             echo "⚠️  Coverage plugin not installed. Install with:"
             echo "   Add 'addSbtPlugin(\"org.scoverage\" % \"sbt-scoverage\" % \"1.9.3\")' to project/plugins.sbt"
             echo "   Add 'coverageEnabled := true' to build.sbt"
