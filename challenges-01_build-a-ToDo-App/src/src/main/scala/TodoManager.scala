@@ -83,17 +83,29 @@ class TodoManager {
         val source = Source.fromFile(dataFile)
         try {
           source.getLines().foreach { line =>
-            val parts = line.split("\\|")
-            if (parts.length >= 4) {
-              val task = Task(
-                id = parts(0),
-                description = parts(1),
-                isCompleted = parts(2).toBoolean,
-                createdAt = java.time.LocalDateTime.parse(parts(3)),
-                completedAt = if (parts.length > 4 && parts(4).nonEmpty) 
-                  Some(java.time.LocalDateTime.parse(parts(4))) else None
-              )
-              tasks += task
+            JSON.parseFull(line) match {
+              case Some(data: Map[String, Any]) =>
+                val id = data.get("id").collect { case s: String => s }.getOrElse("")
+                val description = data.get("description").collect { case s: String => s }.getOrElse("")
+                val isCompleted = data.get("isCompleted") match {
+                  case Some(b: Boolean) => b
+                  case Some(s: String) => s.toBoolean
+                  case Some(n: Double) => n != 0
+                  case _ => false
+                }
+                val createdAtStr = data.get("createdAt").collect { case s: String => s }.getOrElse("")
+                val completedAtStr = data.get("completedAt").collect { case s: String => s }.getOrElse("")
+                val createdAt = if (createdAtStr.nonEmpty) java.time.LocalDateTime.parse(createdAtStr) else java.time.LocalDateTime.now()
+                val completedAt = if (completedAtStr.nonEmpty) Some(java.time.LocalDateTime.parse(completedAtStr)) else None
+                val task = Task(
+                  id = id,
+                  description = description,
+                  isCompleted = isCompleted,
+                  createdAt = createdAt,
+                  completedAt = completedAt
+                )
+                tasks += task
+              case _ => // skip malformed lines
             }
           }
         } finally {
