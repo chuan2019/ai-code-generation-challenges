@@ -56,8 +56,9 @@ class TodoManager {
     else tasks.filter(!_.isCompleted).toList
   }
   
-  def findTask(id: String): Option[Task] = {
-    tasks.find(_.id.startsWith(id))
+  // Returns all tasks whose IDs start with the given prefix.
+  def findTask(id: String): List[Task] = {
+    tasks.filter(_.id.startsWith(id)).toList
   }
   
   private def saveTasks(): Unit = {
