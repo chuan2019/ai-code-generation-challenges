@@ -66,7 +66,7 @@ class TodoManager {
       val writer = new PrintWriter(new File(dataFile))
       try {
         tasks.foreach { task =>
-          writer.println(s"${task.id}|${task.description}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")
+          writer.println(s"${task.id}|${escapePipes(task.description)}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")
         }
       } finally {
         writer.close()
