@@ -1,9 +1,7 @@
-#!/bin/bash
+#!/bin/bash -euo pipefail
 
 # Test runner script for the Scala Todo CLI application
 # This script provides different ways to run tests
-
-set -e  # Exit on any error
 
 cd "$(dirname "$0")"
 
