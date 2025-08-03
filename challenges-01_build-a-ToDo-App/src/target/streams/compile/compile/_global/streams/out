@@ -1,0 +1,11 @@
+[0m[[0m[31merror[0m] [0m[0m/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:69:41: not found: value escapePipes[0m
+[0m[[0m[31merror[0m] [0m[0m          writer.println(s"${task.id}|${escapePipes(task.description)}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:86:13: not found: value JSON[0m
+[0m[[0m[31merror[0m] [0m[0m            JSON.parseFull(line) match {[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:87:31: the type test for pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) cannot be checked at runtime because it has type parameters eliminated by erasure[0m
+[0m[[0m[33mwarn[0m] [0m[0m              case Some(data: Map[String, Any]) =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

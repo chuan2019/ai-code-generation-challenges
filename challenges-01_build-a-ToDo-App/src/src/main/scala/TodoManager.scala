@@ -56,9 +56,9 @@ class TodoManager(dataFileName: String = "tasks.txt") {
     else tasks.filter(!_.isCompleted).toList
   }
   
-  // Returns all tasks whose IDs start with the given prefix.
-  def findTask(id: String): List[Task] = {
-    tasks.filter(_.id.startsWith(id)).toList
+  // Returns the first task whose ID starts with the given prefix.
+  def findTask(id: String): Option[Task] = {
+    tasks.find(_.id.startsWith(id))
   }
   
   private def saveTasks(): Unit = {
@@ -66,7 +66,7 @@ class TodoManager(dataFileName: String = "tasks.txt") {
       val writer = new PrintWriter(new File(dataFile))
       try {
         tasks.foreach { task =>
-          writer.println(s"${task.id}|${escapePipes(task.description)}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")
+          writer.println(s"${task.id}|${task.description}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")
         }
       } finally {
         writer.close()
@@ -83,29 +83,17 @@ class TodoManager(dataFileName: String = "tasks.txt") {
         val source = Source.fromFile(dataFile)
         try {
           source.getLines().foreach { line =>
-            JSON.parseFull(line) match {
-              case Some(data: Map[String, Any]) =>
-                val id = data.get("id").collect { case s: String => s }.getOrElse("")
-                val description = data.get("description").collect { case s: String => s }.getOrElse("")
-                val isCompleted = data.get("isCompleted") match {
-                  case Some(b: Boolean) => b
-                  case Some(s: String) => s.toBoolean
-                  case Some(n: Double) => n != 0
-                  case _ => false
-                }
-                val createdAtStr = data.get("createdAt").collect { case s: String => s }.getOrElse("")
-                val completedAtStr = data.get("completedAt").collect { case s: String => s }.getOrElse("")
-                val createdAt = if (createdAtStr.nonEmpty) java.time.LocalDateTime.parse(createdAtStr) else java.time.LocalDateTime.now()
-                val completedAt = if (completedAtStr.nonEmpty) Some(java.time.LocalDateTime.parse(completedAtStr)) else None
-                val task = Task(
-                  id = id,
-                  description = description,
-                  isCompleted = isCompleted,
-                  createdAt = createdAt,
-                  completedAt = completedAt
-                )
-                tasks += task
-              case _ => // skip malformed lines
+            val parts = line.split("\\|")
+            if (parts.length >= 4) {
+              val task = Task(
+                id = parts(0),
+                description = parts(1),
+                isCompleted = parts(2).toBoolean,
+                createdAt = java.time.LocalDateTime.parse(parts(3)),
+                completedAt = if (parts.length > 4 && parts(4).nonEmpty) 
+                  Some(java.time.LocalDateTime.parse(parts(4))) else None
+              )
+              tasks += task
             }
           }
         } finally {
