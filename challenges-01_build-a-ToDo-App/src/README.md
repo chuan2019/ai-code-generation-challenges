@@ -66,7 +66,7 @@ For convenience, you can use the provided shell script:
 chmod +x todo.sh
 
 # Use the script
-./todo.sh add "Buy groceries"
+./todo.sh add "\"Buy groceries\""
 ./todo.sh list
 ./todo.sh complete abc123
 ./todo.sh delete abc123
@@ -79,7 +79,7 @@ Adds a new task with the given description. Each task gets a unique UUID.
 
 **Example:**
 ```bash
-./todo.sh add "Learn Scala functional programming"
+./todo.sh add "\"Learn Scala functional programming\""
 ```
 
 ### `delete <id>`
