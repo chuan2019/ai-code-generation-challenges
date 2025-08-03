@@ -1,0 +1,178 @@
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt compile
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/classes ...
+[error] /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:69:41: not found: value escapePipes
+[error]           writer.println(s"${task.id}|${escapePipes(task.description)}|${task.isCompleted}|${task.createdAt}|${task.completedAt.getOrElse("")}")
+[error]                                         ^
+[error] /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:86:13: not found: value JSON
+[error]             JSON.parseFull(line) match {
+[error]             ^
+[warn] /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/main/scala/TodoManager.scala:87:31: the type test for pattern scala.collection.immutable.Map[String,Any] (the underlying of Map[String,Any]) cannot be checked at runtime because it has type parameters eliminated by erasure
+[warn]               case Some(data: Map[String, Any]) =>
+[warn]                               ^
+[warn] one warning found
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed Aug 2, 2025, 11:40:28 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt compile
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/classes ...
+[success] Total time: 3 s, completed Aug 2, 2025, 11:42:51 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TaskSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (22 milliseconds)
+[info] - should be created with custom id (0 milliseconds)
+[info] - should be created as completed (0 milliseconds)
+[info] - should be completed correctly (1 millisecond)
+[info] - should be marked as incomplete correctly (0 milliseconds)
+[info] - should generate correct string representation for incomplete task (3 milliseconds)
+[info] - should generate correct string representation for completed task (0 milliseconds)
+[info] - should preserve immutability when completing (0 milliseconds)
+[info] - should preserve immutability when marking incomplete (1 millisecond)
+[info] - should have different ids for different instances (1 millisecond)
+[info] - should handle empty description (0 milliseconds)
+[info] Run completed in 325 milliseconds.
+[info] Total number of tests run: 11
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 11:43:06 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoManagerSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoManagerSpec:
+[info] TodoManager
+[info] - should start with empty task list (12 milliseconds)
+[info] - should add a task successfully (13 milliseconds)
+[info] - should add multiple tasks (17 milliseconds)
+[info] - should delete a task by full id (1 millisecond)
+[info] - should return false when deleting non-existent task (1 millisecond)
+[info] - should complete a task successfully (2 milliseconds)
+[info] - should return None when completing non-existent task (0 milliseconds)
+[info] - should mark a completed task as incomplete (1 millisecond)
+[info] - should return None when marking non-existent task as incomplete (1 millisecond)
+[info] - should list all tasks including completed ones (7 milliseconds)
+[info] - should list only active tasks when requested (3 milliseconds)
+[info] - should find task by full id (1 millisecond)
+[info] - should find task by partial id (0 milliseconds)
+[info] - should return None when finding non-existent task (1 millisecond)
+[info] - should handle multiple tasks with similar id prefixes (1 millisecond)
+[info] - should maintain task order (2 milliseconds)
+[info] - should handle empty description (1 millisecond)
+[info] - should handle special characters in description (1 millisecond)
+[info] - should persist state across multiple operations (2 milliseconds)
+[info] Run completed in 375 milliseconds.
+[info] Total number of tests run: 19
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 11:43:18 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./run-tests.sh unit
+/bin/bash: line 0: /bin/bash: ./run-tests.sh: invalid option name
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ls -la run-tests.sh
+-rwxr-xr-x 1 chuan chuan 3226 Aug  2 23:34 run-tests.sh
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ head -5 run-tests.sh
+#!/bin/bash -euo pipefail
+
+# Test runner script for the Scala Todo CLI application
+# This script provides different ways to run tests
+
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TaskSpec todo.TodoManagerSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (20 milliseconds)
+[info] - should be created with custom id (1 millisecond)
+[info] - should be created as completed (0 milliseconds)
+[info] - should be completed correctly (1 millisecond)
+[info] - should be marked as incomplete correctly (0 milliseconds)
+[info] - should generate correct string representation for incomplete task (5 milliseconds)
+[info] - should generate correct string representation for completed task (1 millisecond)
+[info] - should preserve immutability when completing (0 milliseconds)
+[info] - should preserve immutability when marking incomplete (0 milliseconds)
+[info] - should have different ids for different instances (1 millisecond)
+[info] - should handle empty description (0 milliseconds)
+[info] TodoManagerSpec:
+[info] TodoManager
+[info] - should start with empty task list (1 millisecond)
+[info] - should add a task successfully (4 milliseconds)
+[info] - should add multiple tasks (14 milliseconds)
+[info] - should delete a task by full id (1 millisecond)
+[info] - should return false when deleting non-existent task (1 millisecond)
+[info] - should complete a task successfully (1 millisecond)
+[info] - should return None when completing non-existent task (0 milliseconds)
+[info] - should mark a completed task as incomplete (1 millisecond)
+[info] - should return None when marking non-existent task as incomplete (0 milliseconds)
+[info] - should list all tasks including completed ones (5 milliseconds)
+[info] - should list only active tasks when requested (1 millisecond)
+[info] - should find task by full id (1 millisecond)
+[info] - should find task by partial id (0 milliseconds)
+[info] - should return None when finding non-existent task (1 millisecond)
+[info] - should handle multiple tasks with similar id prefixes (1 millisecond)
+[info] - should maintain task order (1 millisecond)
+[info] - should handle empty description (1 millisecond)
+[info] - should handle special characters in description (0 milliseconds)
+[info] - should persist state across multiple operations (2 milliseconds)
+[info] Run completed in 408 milliseconds.
+[info] Total number of tests run: 30
+[info] Suites: completed 2, aborted 0
+[info] Tests: succeeded 30, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 11:43:53 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt assembly
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] 2 file(s) merged using strategy 'Rename' (Run the task at debug level to see the details)
+[info] 2 file(s) merged using strategy 'Discard' (Run the task at debug level to see the details)
+[info] Built: /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/todo-cli.jar
+[info] Jar hash: 479e2046af6f8e57f860ae1e20b4e462ec71c8ba
+[success] Total time: 2 s, completed Aug 2, 2025, 11:44:15 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ java -jar target/scala-2.13/todo-cli.jar --help
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_bu
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ 
