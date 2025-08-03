@@ -1,0 +1,489 @@
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges$ cd /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src && sbt compile
+Command 'sbt' not found, did you mean:
+  command 'smt' from snap smt (0.2)
+  command 'mbt' from deb mbt (3.6-3)
+  command 'sbmt' from deb atfs (1.4pl6-15)
+  command 'sbd' from deb sbd (1.5.1-1ubuntu2)
+  command 'slt' from deb slt (0.0.git20140301-6build2)
+  command 'bst' from deb buildstream (1.6.1-1)
+  command 'srt' from deb python3-pysrt (1.0.1-2)
+  command 'sct' from deb sct (1.3-1)
+  command 'st' from deb stterm (0.8.4-1)
+  command 'sqt' from deb python3-sqt (0.8.0-5build1)
+  command 'lbt' from deb lbt (1.2.2-7)
+  command 'sb' from deb lrzsz (0.12.21-10)
+See 'snap info <snapname>' for additional versions.
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ which scala
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sudo apt update && sudo apt install -y openjdk-11-jdk
+[sudo] password for chuan: 
+Hit:1 https://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+21 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libice-dev libsm-dev libxt-dev openjdk-11-jdk-headless
+Suggested packages:
+  libice-doc libsm-doc libxt-doc openjdk-11-demo openjdk-11-source visualvm
+The following NEW packages will be installed:
+  libice-dev libsm-dev libxt-dev openjdk-11-jdk openjdk-11-jdk-headless
+0 upgraded, 5 newly installed, 0 to remove and 21 not upgraded.
+Need to get 75.5 MB of archives.
+After this operation, 85.2 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libice-dev amd64 2:1.0.10-1build2 [51.4 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsm-dev amd64 2:1.2.3-1build2 [18.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxt-dev amd64 1:1.2.1-1 [396 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openjdk-11-jdk-headless amd64 11.0.28+6-1ubuntu1~22.04.1 [73.6 MB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openjdk-11-jdk amd64 11.0.28+6-1ubuntu1~22.04.1 [1342 kB]
+Fetched 75.5 MB in 9s (8848 kB/s)                                                                           
+Selecting previously unselected package libice-dev:amd64.
+(Reading database ... 99485 files and directories currently installed.)
+Preparing to unpack .../libice-dev_2%3a1.0.10-1build2_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-1build2) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../libsm-dev_2%3a1.2.3-1build2_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1build2) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../libxt-dev_1%3a1.2.1-1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.2.1-1) ...
+Selecting previously unselected package openjdk-11-jdk-headless:amd64.
+Preparing to unpack .../openjdk-11-jdk-headless_11.0.28+6-1ubuntu1~22.04.1_amd64.deb ...
+Unpacking openjdk-11-jdk-headless:amd64 (11.0.28+6-1ubuntu1~22.04.1) ...
+Selecting previously unselected package openjdk-11-jdk:amd64.
+Preparing to unpack .../openjdk-11-jdk_11.0.28+6-1ubuntu1~22.04.1_amd64.deb ...
+Unpacking openjdk-11-jdk:amd64 (11.0.28+6-1ubuntu1~22.04.1) ...
+Setting up libice-dev:amd64 (2:1.0.10-1build2) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1build2) ...
+Setting up openjdk-11-jdk-headless:amd64 (11.0.28+6-1ubuntu1~22.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jaotc to provide /usr/bin/jaotc (jaotc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up libxt-dev:amd64 (1:1.2.1-1) ...
+Setting up openjdk-11-jdk:amd64 (11.0.28+6-1ubuntu1~22.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ curl -s "https://get.sdkman.io" | bash
+
+                                -+syyyyyyys:
+                            `/yho:`       -yd.
+                         `/yh/`             +m.
+                       .oho.                 hy                          .`
+                     .sh/`                   :N`                `-/o`  `+dyyo:.
+                   .yh:`                     `M-          `-/osysoym  :hs` `-+sys:      hhyssssssssy+
+                 .sh:`                       `N:          ms/-``  yy.yh-      -hy.    `.N-````````+N.
+               `od/`                         `N-       -/oM-      ddd+`     `sd:     hNNm        -N:
+              :do`                           .M.       dMMM-     `ms.      /d+`     `NMMs       `do
+            .yy-                             :N`    ```mMMM.      -      -hy.       /MMM:       yh
+          `+d+`           `:/oo/`       `-/osyh/ossssssdNMM`           .sh:         yMMN`      /m.
+         -dh-           :ymNMMMMy  `-/shmNm-`:N/-.``   `.sN            /N-         `NMMy      .m/
+       `oNs`          -hysosmMMMMydmNmds+-.:ohm           :             sd`        :MMM/      yy
+      .hN+           /d:    -MMMmhs/-.`   .MMMh   .ss+-                 `yy`       sMMN`     :N.
+     :mN/           `N/     `o/-`         :MMMo   +MMMN-         .`      `ds       mMMh      do
+    /NN/            `N+....--:/+oooosooo+:sMMM:   hMMMM:        `my       .m+     -MMM+     :N.
+   /NMo              -+ooooo+/:-....`...:+hNMN.  `NMMMd`        .MM/       -m:    oMMN.     hs
+  -NMd`                                    :mm   -MMMm- .s/     -MMm.       /m-   mMMd     -N.
+ `mMM/                                      .-   /MMh. -dMo     -MMMy        od. .MMMs..---yh
+ +MMM.                                           sNo`.sNMM+     :MMMM/        sh`+MMMNmNm+++-
+ mMMM-                                           /--ohmMMM+     :MMMMm.       `hyymmmdddo
+ MMMMh.                  ````                  `-+yy/`yMMM/     :MMMMMy       -sm:.``..-:-.`
+ dMMMMmo-.``````..-:/osyhddddho.           `+shdh+.   hMMM:     :MmMMMM/   ./yy/` `:sys+/+sh/
+ .dMMMMMMmdddddmmNMMMNNNNNMMMMMs           sNdo-      dMMM-  `-/yd/MMMMm-:sy+.   :hs-      /N`
+  `/ymNNNNNNNmmdys+/::----/dMMm:          +m-         mMMM+ohmo/.` sMMMMdo-    .om:       `sh
+     `.-----+/.`       `.-+hh/`         `od.          NMMNmds/     `mmy:`     +mMy      `:yy.
+           /moyso+//+ossso:.           .yy`          `dy+:`         ..       :MMMN+---/oys:
+         /+m:  `.-:::-`               /d+                                    +MMMMMMMNh:`
+        +MN/                        -yh.                                     `+hddhy+.
+       /MM+                       .sh:
+      :NMo                      -sh/
+     -NMs                    `/yy:
+    .NMy                  `:sh+.
+   `mMm`               ./yds-
+  `dMMMmyo:-.````.-:oymNy:`
+  +NMMMMMMMMMMMMMMMMms:`
+    -+shmNMMMNmdy+:`
+
+
+                                                                 Now attempting installation...
+
+
+Looking for a previous installation of SDKMAN...
+Looking for unzip...
+Looking for zip...
+Looking for tar...
+Looking for curl...
+Looking for sed...
+Installing SDKMAN scripts...
+Create distribution directories...
+Getting available candidates...
+Prime platform file...
+Prime the config file...
+Installing script cli archive...
+* Downloading...
+######################################################################## 100.0%
+* Checking archive integrity...
+* Extracting archive...
+* Copying archive contents...
+* Cleaning up...
+
+Installing script cli archive...
+* Downloading...
+######################################################################## 100.0%
+* Checking archive integrity...
+* Extracting archive...
+* Copying archive contents...
+* Cleaning up...
+
+Set version to 5.20.0 ...
+Set native version to 0.7.4 ...
+Attempt update of interactive bash profile on regular UNIX...
+Added sdkman init snippet to /home/chuan/.bashrc
+Attempt update of zsh profile...
+Updated existing /home/chuan/.zshrc
+
+
+
+All done!
+
+
+You are subscribed to the STABLE channel.
+
+Please open a new terminal, or run the following in the existing one:
+
+    source "/home/chuan/.sdkman/bin/sdkman-init.sh"
+
+Then issue the following command:
+
+    sdk help
+
+Enjoy!!!
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ source "/home/chuan/.sdkman/bin/sdkman-init.sh" && sdk install scala && sdk install sbt
+
+Downloading: scala 3.7.2
+
+In progress...
+
+###################################################################################################### 100.0%
+
+Installing: scala 3.7.2
+Done installing!
+
+
+Setting scala 3.7.2 as default.
+
+Downloading: sbt 1.11.3
+
+In progress...
+
+###################################################################################################### 100.0%
+
+Installing: sbt 1.11.3
+Done installing!
+
+
+Setting sbt 1.11.3 as default.
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt compile
+[info] [launcher] getting org.scala-sbt sbt 1.11.3  (this may take some time)...
+[info] [launcher] getting Scala 2.12.20 (for sbt)...
+[info] Updated file /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project/build.properties: set sbt.version to 1.11.3
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] Updating src-build
+https://repo1.maven.org/maven2/jline/jline/2.14.6/jline-2.14.6.pom
+  100.0% [##########] 19.4 KiB (104.4 KiB / s)
+https://repo1.maven.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+  100.0% [##########] 6.4 KiB (156.5 KiB / s)
+[info] Resolved src-build dependencies
+[info] Fetching artifacts of src-build
+[info] Fetched artifacts of src-build
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] Executing in batch mode. For better performance use sbt's shell
+[info] Updating temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+https://repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.12/scala2-sbt-bridge-2.13.12.pom
+  100.0% [##########] 1.9 KiB (51.4 KiB / s)
+[info] Resolved temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3 dependencies
+[info] Updating scala-todo-cli_2.13
+https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.pom
+  100.0% [##########] 1.6 KiB (20.3 KiB / s)
+https://repo1.maven.org/maven2/com/github/scopt/scopt_2.13/4.1.0/scopt_2.13-4.1.0.pom
+  100.0% [##########] 1.7 KiB (10.7 KiB / s)
+[info] Resolved scala-todo-cli_2.13 dependencies
+[info] Updating scala-todo-cli_2.13
+https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.2.17/scalatest_2.13-3.2.17.pom
+  100.0% [##########] 4.6 KiB (123.6 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-funsuite_2.13/3.2.17/scalatest-funsuite_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (46.9 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-flatspec_2.13/3.2.17/scalatest-flatspec_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (39.2 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-propspec_2.13/3.2.17/scalatest-propspec_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (21.2 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-featurespec_2.13/3.2.17/scalatest-featurespec_2.13-3.…
+  100.0% [##########] 2.4 KiB (15.9 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-mustmatchers_2.13/3.2.17/scalatest-mustmatchers_2.13-…
+  100.0% [##########] 2.4 KiB (52.5 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-core_2.13/3.2.17/scalatest-core_2.13-3.2.17.pom
+  100.0% [##########] 3.8 KiB (21.9 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-matchers-core_2.13/3.2.17/scalatest-matchers-core_2.1…
+  100.0% [##########] 2.4 KiB (14.0 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-wordspec_2.13/3.2.17/scalatest-wordspec_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (13.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-freespec_2.13/3.2.17/scalatest-freespec_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (52.0 KiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.10/scala-reflect-2.13.10.pom
+  100.0% [##########] 1.8 KiB (35.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-diagrams_2.13/3.2.17/scalatest-diagrams_2.13-3.2.17.p…
+  100.0% [##########] 2.4 KiB (47.9 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-funspec_2.13/3.2.17/scalatest-funspec_2.13-3.2.17.pom
+  100.0% [##########] 2.4 KiB (22.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-shouldmatchers_2.13/3.2.17/scalatest-shouldmatchers_2…
+  100.0% [##########] 2.4 KiB (57.6 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-refspec_2.13/3.2.17/scalatest-refspec_2.13-3.2.17.pom
+  100.0% [##########] 2.4 KiB (23.7 KiB / s)
+[info] Resolved scala-todo-cli_2.13 dependencies
+[info] Updating scala-todo-cli_2.13
+https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.pom
+  100.0% [##########] 1.8 KiB (48.4 KiB / s)
+[info] Resolved scala-todo-cli_2.13 dependencies
+[info] Updating scala-todo-cli_2.13
+https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.pom
+  100.0% [##########] 2.5 KiB (44.1 KiB / s)
+https://repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.pom
+  100.0% [##########] 2.6 KiB (43.4 KiB / s)
+https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.pom
+  100.0% [##########] 2.0 KiB (33.0 KiB / s)
+https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.pom
+  100.0% [##########] 17.3 KiB (288.2 KiB / s)
+https://repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils-parent/4.12/java-diff-utils-parent-…
+  100.0% [##########] 9.9 KiB (205.4 KiB / s)
+https://repo1.maven.org/maven2/org/jline/jline-parent/3.22.0/jline-parent-3.22.0.pom
+  100.0% [##########] 27.0 KiB (562.6 KiB / s)
+[info] Resolved scala-todo-cli_2.13 dependencies
+[info] Fetching artifacts of temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+https://repo1.maven.org/maven2/org/scala-lang/scala2-sbt-bridge/2.13.12/scala2-sbt-bridge-2.13.12.jar
+  100.0% [##########] 262.7 KiB (1.3 MiB / s)
+[info] Fetched artifacts of temp-module-bde07663ebf5029c076e7b57097cc1dc9cf60cf3
+[info] Fetching artifacts of scala-todo-cli_2.13
+https://repo1.maven.org/maven2/org/scalatest/scalatest-propspec_2.13/3.2.17/scalatest-propspec_2.13-3.2.17.j…
+  100.0% [##########] 33.8 KiB (352.2 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-diagrams_2.13/3.2.17/scalatest-diagrams_2.13-3.2.17.j…
+  100.0% [##########] 52.5 KiB (334.7 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-wordspec_2.13/3.2.17/scalatest-wordspec_2.13-3.2.17.j…
+  100.0% [##########] 131.7 KiB (665.1 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-shouldmatchers_2.13/3.2.17/scalatest-shouldmatchers_2…
+  100.0% [##########] 180.6 KiB (1003.1 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-flatspec_2.13/3.2.17/scalatest-flatspec_2.13-3.2.17.j…
+  100.0% [##########] 171.0 KiB (558.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-funspec_2.13/3.2.17/scalatest-funspec_2.13-3.2.17.jar
+  100.0% [##########] 107.7 KiB (235.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-featurespec_2.13/3.2.17/scalatest-featurespec_2.13-3.…
+  100.0% [##########] 79.8 KiB (378.0 KiB / s)
+https://repo1.maven.org/maven2/com/github/scopt/scopt_2.13/4.1.0/scopt_2.13-4.1.0.jar
+  100.0% [##########] 124.4 KiB (473.1 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-refspec_2.13/3.2.17/scalatest-refspec_2.13-3.2.17.jar
+  100.0% [##########] 25.9 KiB (76.6 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.2.17/scalatest_2.13-3.2.17.jar
+  100.0% [##########] 712B (3.6 KiB / s)
+https://repo1.maven.org/maven2/org/scalactic/scalactic_2.13/3.2.17/scalactic_2.13-3.2.17.jar
+  100.0% [##########] 1.5 MiB (1.5 MiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-mustmatchers_2.13/3.2.17/scalatest-mustmatchers_2.13-…
+  100.0% [##########] 178.5 KiB (779.5 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-compatible/3.2.17/scalatest-compatible-3.2.17.jar
+  100.0% [##########] 1.4 KiB (13.3 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-matchers-core_2.13/3.2.17/scalatest-matchers-core_2.1…
+  100.0% [##########] 1.9 MiB (1.1 MiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-freespec_2.13/3.2.17/scalatest-freespec_2.13-3.2.17.j…
+  100.0% [##########] 101.0 KiB (711.5 KiB / s)
+https://repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar
+  100.0% [##########] 70.6 KiB (405.8 KiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-core_2.13/3.2.17/scalatest-core_2.13-3.2.17.jar
+  100.0% [##########] 3.6 MiB (2.3 MiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar
+  100.0% [##########] 3.6 MiB (1.7 MiB / s)
+https://repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar
+  100.0% [##########] 1.0 MiB (1.1 MiB / s)
+https://repo1.maven.org/maven2/org/scalatest/scalatest-funsuite_2.13/3.2.17/scalatest-funsuite_2.13-3.2.17.j…
+  100.0% [##########] 62.9 KiB (249.8 KiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.13/2.1.0/scala-xml_2.13-2.1.0.jar
+  100.0% [##########] 471.8 KiB (1.1 MiB / s)
+https://repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+  100.0% [##########] 1.8 MiB (2.6 MiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.12/scala-compiler-2.13.12.jar
+  100.0% [##########] 11.6 MiB (3.4 MiB / s)
+https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar
+  100.0% [##########] 5.6 MiB (3.8 MiB / s)
+[info] Fetched artifacts of scala-todo-cli_2.13
+[info] compiling 3 Scala sources to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/classes ...
+[success] Total time: 9 s, completed Aug 2, 2025, 5:39:08 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI help"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI help
+Error: Unknown argument 'help'
+Try --help for more information.
+[success] Total time: 1 s, completed Aug 2, 2025, 5:39:22 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI --help"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI --help
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI add \"Learn Scala programming\""
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI add "Learn Scala programming"
+✓ Added task: Learn Scala programming
+  ID: 2b09a1a5...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:39:51 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI add \"Build a CLI application\""
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI add "Build a CLI application"
+✓ Added task: Build a CLI application
+  ID: 5a339f52...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:40:03 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI list"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI list
+All Tasks:
+==========
+1. [○] Learn Scala programming (created: 2025-08-02)
+   ID: 2b09a1a5...
+2. [○] Build a CLI application (created: 2025-08-02)
+   ID: 5a339f52...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:40:16 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI complete 5a339f"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI complete 5a339f
+✓ Marked as complete: Build a CLI application
+[success] Total time: 1 s, completed Aug 2, 2025, 5:40:32 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI list"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI list
+All Tasks:
+==========
+1. [○] Learn Scala programming (created: 2025-08-02)
+   ID: 2b09a1a5...
+2. [✓] Build a CLI application (created: 2025-08-02)
+   ID: 5a339f52...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:40:44 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI list --active-only"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI list --active-only
+Active Tasks:
+=============
+1. [○] Learn Scala programming (created: 2025-08-02)
+   ID: 2b09a1a5...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:40:59 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI delete 2b09a1"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI delete 2b09a1
+✓ Deleted task: Learn Scala programming
+[success] Total time: 1 s, completed Aug 2, 2025, 5:41:32 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "runMain todo.TodoCLI list"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI list
+All Tasks:
+==========
+1. [✓] Build a CLI application (created: 2025-08-02)
+   ID: 5a339f52...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:41:50 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ls -la tasks.txt
+-rw-r--r-- 1 chuan chuan 120 Aug  2 17:41 tasks.txt
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ cat tasks.txt
+5a339f52-0c9c-42fd-bc9d-8045712ea512|Build a CLI application|true|2025-08-02T17:40:03.497144|2025-08-02T17:40:32.955234
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ chmod +x /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/todo.sh
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./todo.sh add "Test the shell script"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI add Test the shell script
+Error: Unknown argument 'the'
+Error: Unknown argument 'shell'
+Error: Unknown argument 'script'
+Try --help for more information.
+[success] Total time: 1 s, completed Aug 2, 2025, 5:43:02 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./todo.sh list
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] running todo.TodoCLI list
+All Tasks:
+==========
+1. [✓] Build a CLI application (created: 2025-08-02)
+   ID: 5a339f52...
+[success] Total time: 1 s, completed Aug 2, 2025, 5:43:21 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ 
