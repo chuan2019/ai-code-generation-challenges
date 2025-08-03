@@ -1,0 +1,914 @@
+[warn] Ignoring load failure: no project loaded.
+java.lang.RuntimeException: Session not initialized.
+        at scala.sys.package$.error(package.scala:30)
+        at sbt.Project$.$anonfun$getOrError$1(Project.scala:451)
+        at scala.Option.getOrElse(Option.scala:189)
+        at sbt.Project$.getOrError(Project.scala:451)
+        at sbt.Project$.session(Project.scala:457)
+        at sbt.Project$.extract(Project.scala:462)
+        at sbt.BuiltinCommands$.notifyUsersAboutShell(Main.scala:1181)
+        at sbt.BuiltinCommands$.$anonfun$notifyUsersAboutShell$3(Main.scala:1190)
+        at sbt.Command$.$anonfun$command$2(Command.scala:98)
+        at sbt.Command$.process(Command.scala:194)
+        at sbt.MainLoop$.$anonfun$processCommand$7(MainLoop.scala:267)
+        at scala.Option.getOrElse(Option.scala:189)
+        at sbt.MainLoop$.process$1(MainLoop.scala:267)
+        at sbt.MainLoop$.processCommand(MainLoop.scala:314)
+        at sbt.MainLoop$.$anonfun$next$5(MainLoop.scala:171)
+        at sbt.State$StateOpsImpl$.runCmd$1(State.scala:290)
+        at sbt.State$StateOpsImpl$.process$extension(State.scala:326)
+        at sbt.MainLoop$.$anonfun$next$4(MainLoop.scala:171)
+        at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+        at sbt.MainLoop$.next(MainLoop.scala:171)
+        at sbt.MainLoop$.run(MainLoop.scala:152)
+        at sbt.MainLoop$.$anonfun$runWithNewLog$1(MainLoop.scala:127)
+        at sbt.io.Using.apply(Using.scala:41)
+        at sbt.MainLoop$.runWithNewLog(MainLoop.scala:120)
+        at sbt.MainLoop$.runAndClearLast(MainLoop.scala:74)
+        at sbt.MainLoop$.runLoggedLoop(MainLoop.scala:59)
+        at sbt.MainLoop$.runLogged(MainLoop.scala:50)
+        at sbt.StandardMain$.runManaged(Main.scala:225)
+        at sbt.xMain$.$anonfun$run$11(Main.scala:136)
+        at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+        at scala.Console$.withIn(Console.scala:230)
+        at sbt.internal.util.Terminal$.withIn(Terminal.scala:620)
+        at sbt.internal.util.Terminal$.$anonfun$withStreams$1(Terminal.scala:400)
+        at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+        at scala.Console$.withOut(Console.scala:167)
+        at sbt.internal.util.Terminal$.$anonfun$withOut$2(Terminal.scala:610)
+        at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)
+        at scala.Console$.withErr(Console.scala:196)
+        at sbt.internal.util.Terminal$.withOut(Terminal.scala:610)
+        at sbt.internal.util.Terminal$.withStreams(Terminal.scala:400)
+        at sbt.xMain$.withStreams$1(Main.scala:89)
+        at sbt.xMain$.run(Main.scala:124)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at sbt.internal.XMainConfiguration.run(XMainConfiguration.java:59)
+        at sbt.xMain.run(Main.scala:48)
+        at xsbt.boot.Launch$.$anonfun$run$1(Launch.scala:149)
+        at xsbt.boot.Launch$.withContextLoader(Launch.scala:176)
+        at xsbt.boot.Launch$.run(Launch.scala:149)
+        at xsbt.boot.Launch$.$anonfun$apply$1(Launch.scala:44)
+        at xsbt.boot.Launch$.launch(Launch.scala:159)
+        at xsbt.boot.Launch$.apply(Launch.scala:44)
+        at xsbt.boot.Launch$.apply(Launch.scala:21)
+        at xsbt.boot.Boot$.runImpl(Boot.scala:78)
+        at xsbt.boot.Boot$.run(Boot.scala:73)
+        at xsbt.boot.Boot$.main(Boot.scala:21)
+        at xsbt.boot.Boot.main(Boot.scala)
+[error] Session not initialized.
+[error] Use 'last' for the full log.
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TaskSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 5 Scala sources to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[error] java.lang.NoClassDefFoundError: com/vladsch/flexmark/util/ast/Node
+[error]         at org.scalatest.tools.ReporterFactory.createHtmlReporter(ReporterFactory.scala:194)
+[error]         at org.scalatest.tools.ReporterFactory.getReporterFromConfiguration(ReporterFactory.scala:245)
+[error]         at org.scalatest.tools.ReporterFactory.$anonfun$createReportersFromConfigurations$1(ReporterFactory.scala:254)
+[error]         at scala.collection.Iterator$$anon$9.next(Iterator.scala:584)
+[error]         at scala.collection.immutable.List.prependedAll(List.scala:153)
+[error]         at scala.collection.immutable.List$.from(List.scala:684)
+[error]         at scala.collection.immutable.List$.from(List.scala:681)
+[error]         at scala.collection.SeqFactory$Delegate.from(Factory.scala:306)
+[error]         at scala.collection.immutable.Seq$.from(Seq.scala:42)
+[error]         at scala.collection.immutable.Seq$.from(Seq.scala:39)
+[error]         at scala.collection.IterableOps.map(Iterable.scala:682)
+[error]         at scala.collection.IterableOps.map$(Iterable.scala:682)
+[error]         at org.scalatest.tools.ReporterConfigurations.map(ReporterConfiguration.scala:42)
+[error]         at org.scalatest.tools.ReporterFactory.createReportersFromConfigurations(ReporterFactory.scala:253)
+[error]         at org.scalatest.tools.ReporterFactory.getDispatchReporter(ReporterFactory.scala:257)
+[error]         at org.scalatest.tools.Framework$ScalaTestRunner.<init>(Framework.scala:674)
+[error]         at org.scalatest.tools.Framework.runner(Framework.scala:1150)
+[error]         at sbt.Defaults$.$anonfun$createTestRunners$1(Defaults.scala:1583)
+[error]         at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+[error]         at scala.collection.immutable.Map$Map1.foreach(Map.scala:193)
+[error]         at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+[error]         at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+[error]         at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+[error]         at sbt.Defaults$.createTestRunners(Defaults.scala:1577)
+[error]         at sbt.Defaults$.allTestGroupsTask(Defaults.scala:1663)
+[error]         at sbt.Defaults$.$anonfun$inputTests0$4(Defaults.scala:1562)
+[error]         at sbt.std.FullInstance$.$anonfun$flattenFun$3(TaskMacro.scala:81)
+[error]         at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error]         at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+[error]         at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+[error]         at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+[error]         at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+[error]         at sbt.Execute.work(Execute.scala:292)
+[error]         at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+[error]         at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error]         at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[error]         at java.base/java.lang.Thread.run(Thread.java:829)
+[error] Caused by: java.lang.ClassNotFoundException: com.vladsch.flexmark.util.ast.Node
+[error]         at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:476)
+[error]         at sbt.internal.ManagedClassLoader.findClass(ManagedClassLoader.java:103)
+[error]         at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:594)
+[error]         at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+[error]         at org.scalatest.tools.ReporterFactory.createHtmlReporter(ReporterFactory.scala:194)
+[error]         at org.scalatest.tools.ReporterFactory.getReporterFromConfiguration(ReporterFactory.scala:245)
+[error]         at org.scalatest.tools.ReporterFactory.$anonfun$createReportersFromConfigurations$1(ReporterFactory.scala:254)
+[error]         at scala.collection.Iterator$$anon$9.next(Iterator.scala:584)
+[error]         at scala.collection.immutable.List.prependedAll(List.scala:153)
+[error]         at scala.collection.immutable.List$.from(List.scala:684)
+[error]         at scala.collection.immutable.List$.from(List.scala:681)
+[error]         at scala.collection.SeqFactory$Delegate.from(Factory.scala:306)
+[error]         at scala.collection.immutable.Seq$.from(Seq.scala:42)
+[error]         at scala.collection.immutable.Seq$.from(Seq.scala:39)
+[error]         at scala.collection.IterableOps.map(Iterable.scala:682)
+[error]         at scala.collection.IterableOps.map$(Iterable.scala:682)
+[error]         at org.scalatest.tools.ReporterConfigurations.map(ReporterConfiguration.scala:42)
+[error]         at org.scalatest.tools.ReporterFactory.createReportersFromConfigurations(ReporterFactory.scala:253)
+[error]         at org.scalatest.tools.ReporterFactory.getDispatchReporter(ReporterFactory.scala:257)
+[error]         at org.scalatest.tools.Framework$ScalaTestRunner.<init>(Framework.scala:674)
+[error]         at org.scalatest.tools.Framework.runner(Framework.scala:1150)
+[error]         at sbt.Defaults$.$anonfun$createTestRunners$1(Defaults.scala:1583)
+[error]         at scala.collection.TraversableLike.$anonfun$map$1(TraversableLike.scala:286)
+[error]         at scala.collection.immutable.Map$Map1.foreach(Map.scala:193)
+[error]         at scala.collection.TraversableLike.map(TraversableLike.scala:286)
+[error]         at scala.collection.TraversableLike.map$(TraversableLike.scala:279)
+[error]         at scala.collection.AbstractTraversable.map(Traversable.scala:108)
+[error]         at sbt.Defaults$.createTestRunners(Defaults.scala:1577)
+[error]         at sbt.Defaults$.allTestGroupsTask(Defaults.scala:1663)
+[error]         at sbt.Defaults$.$anonfun$inputTests0$4(Defaults.scala:1562)
+[error]         at sbt.std.FullInstance$.$anonfun$flattenFun$3(TaskMacro.scala:81)
+[error]         at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error]         at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+[error]         at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+[error]         at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+[error]         at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+[error]         at sbt.Execute.work(Execute.scala:292)
+[error]         at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+[error]         at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error]         at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[error]         at java.base/java.lang.Thread.run(Thread.java:829)
+[error] (Test / testOnly) java.lang.NoClassDefFoundError: com/vladsch/flexmark/util/ast/Node
+[error] Total time: 7 s, completed Aug 2, 2025, 10:16:30 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TaskSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (25 milliseconds)
+[info] - should be created with custom id (1 millisecond)
+[info] - should be created as completed (1 millisecond)
+[info] - should be completed correctly (0 milliseconds)
+[info] - should be marked as incomplete correctly (0 milliseconds)
+[info] - should generate correct string representation for incomplete task (7 milliseconds)
+[info] - should generate correct string representation for completed task (0 milliseconds)
+[info] - should preserve immutability when completing (1 millisecond)
+[info] - should preserve immutability when marking incomplete (0 milliseconds)
+[info] - should have different ids for different instances (1 millisecond)
+[info] - should handle empty description (0 milliseconds)
+[info] Run completed in 364 milliseconds.
+[info] Total number of tests run: 11
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 10:16:57 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoManagerSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoManagerSpec:
+[info] TodoManager
+[info] - should start with empty task list *** FAILED *** (29 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02)) was not empty (TodoManagerSpec.scala:30)
+[info] - should add a task successfully *** FAILED *** (11 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02)) had size 2 instead of expected size 1 (TodoManagerSpec.scala:42)
+[info] - should add multiple tasks *** FAILED *** (3 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02)) had size 5 instead of expected size 3 (TodoManagerSpec.scala:52)
+[info] - should delete a task by full id *** FAILED *** (2 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02)) was not empty (TodoManagerSpec.scala:61)
+[info] - should return false when deleting non-existent task *** FAILED *** (1 millisecond)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02)) had size 6 instead of expected size 1 (TodoManagerSpec.scala:67)
+[info] - should complete a task successfully (2 milliseconds)
+[info] - should return None when completing non-existent task (1 millisecond)
+[info] - should mark a completed task as incomplete *** FAILED *** (3 milliseconds)
+[info]   true was not equal to false (TodoManagerSpec.scala:102)
+[info] - should return None when marking non-existent task as incomplete (0 milliseconds)
+[info] - should list all tasks including completed ones *** FAILED *** (3 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Task to mark incomplete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02)) had size 10 instead of expected size 2 (TodoManagerSpec.scala:116)
+[info] - should list only active tasks when requested *** FAILED *** (3 milliseconds)
+[info]   List([○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [○] Task to mark incomplete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [○] Active task (created: 2025-08-02)) had size 8 instead of expected size 1 (TodoManagerSpec.scala:127)
+[info] - should find task by full id (2 milliseconds)
+[info] - should find task by partial id (0 milliseconds)
+[info] - should return None when finding non-existent task (1 millisecond)
+[info] - should handle multiple tasks with similar id prefixes (2 milliseconds)
+[info] - should maintain task order *** FAILED *** (3 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Task to mark incomplete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] First task (created: 2025-08-02), [○] Second task (created: 2025-08-02), [○] Third task (created: 2025-08-02)) had size 20 instead of expected size 3 (TodoManagerSpec.scala:174)
+[info] - should handle empty description *** FAILED *** (1 millisecond)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Task to mark incomplete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] First task (created: 2025-08-02), [○] Second task (created: 2025-08-02), [○] Third task (created: 2025-08-02), [○]  (created: 2025-08-02)) had size 21 instead of expected size 1 (TodoManagerSpec.scala:184)
+[info] - should handle special characters in description (1 millisecond)
+Warning: Could not load tasks: For input string: ";':",./<>?"
+[info] - should persist state across multiple operations *** FAILED *** (3 milliseconds)
+[info]   List([✓] Build a CLI application (created: 2025-08-02), [○] Test task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] Task 3 (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Task to mark incomplete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Active task (created: 2025-08-02), [✓] Task to complete (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Findable task (created: 2025-08-02), [○] Existing task (created: 2025-08-02), [○] Task 1 (created: 2025-08-02), [○] Task 2 (created: 2025-08-02), [○] First task (created: 2025-08-02), [○] Second task (created: 2025-08-02), [○] Third task (created: 2025-08-02), [○]  (created: 2025-08-02), [✓] Persistent task 1 (created: 2025-08-02)) had size 22 instead of expected size 1 (TodoManagerSpec.scala:209)
+[info] Run completed in 498 milliseconds.
+[info] Total number of tests run: 19
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 8, failed 11, canceled 0, ignored 0, pending 0
+[info] *** 11 TESTS FAILED ***
+[error] Failed tests:
+[error]         todo.TodoManagerSpec
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 1 s, completed Aug 2, 2025, 10:17:25 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoManagerSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/classes ...
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/classes ...
+[info] compiling 2 Scala sources to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[info] TodoManagerSpec:
+[info] TodoManager
+[info] - should start with empty task list (15 milliseconds)
+[info] - should add a task successfully (21 milliseconds)
+[info] - should add multiple tasks (16 milliseconds)
+[info] - should delete a task by full id (2 milliseconds)
+[info] - should return false when deleting non-existent task (1 millisecond)
+[info] - should complete a task successfully (3 milliseconds)
+[info] - should return None when completing non-existent task (0 milliseconds)
+[info] - should mark a completed task as incomplete (1 millisecond)
+[info] - should return None when marking non-existent task as incomplete (1 millisecond)
+[info] - should list all tasks including completed ones (9 milliseconds)
+[info] - should list only active tasks when requested (2 milliseconds)
+[info] - should find task by full id (0 milliseconds)
+[info] - should find task by partial id (1 millisecond)
+[info] - should return None when finding non-existent task (1 millisecond)
+[info] - should handle multiple tasks with similar id prefixes (1 millisecond)
+[info] - should maintain task order (2 milliseconds)
+[info] - should handle empty description (1 millisecond)
+[info] - should handle special characters in description (1 millisecond)
+[info] - should persist state across multiple operations (3 milliseconds)
+[info] Run completed in 498 milliseconds.
+[info] Total number of tests run: 19
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 8 s, completed Aug 2, 2025, 10:37:35 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoManagerIntegrationSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoManagerIntegrationSpec:
+[info] TodoManager
+[info] - should persist tasks to file and reload them (42 milliseconds)
+[info] - should handle empty file gracefully (4 milliseconds)
+Warning: Could not load tasks: For input string: "parts"
+[info] - should handle malformed file data gracefully (3 milliseconds)
+[info] - should preserve task IDs across restarts (1 millisecond)
+[info] - should preserve timestamps across restarts (2 milliseconds)
+[info] - should handle special characters in file persistence *** FAILED *** (18 milliseconds)
+[info]   None was equal to None (TodoManagerIntegrationSpec.scala:116)
+[info] - should maintain consistency after multiple operations and restarts (4 milliseconds)
+[info] - should handle concurrent access gracefully (1 millisecond)
+[info] - should recover from corrupted file by starting fresh (1 millisecond)
+[info] Run completed in 432 milliseconds.
+[info] Total number of tests run: 9
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 8, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error]         todo.TodoManagerIntegrationSpec
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 1 s, completed Aug 2, 2025, 10:37:48 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoManagerIntegrationSpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 2 Scala sources to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[info] TodoManagerIntegrationSpec:
+[info] TodoManager
+[info] - should persist tasks to file and reload them (41 milliseconds)
+[info] - should handle empty file gracefully (2 milliseconds)
+Warning: Could not load tasks: For input string: "parts"
+[info] - should handle malformed file data gracefully (2 milliseconds)
+[info] - should preserve task IDs across restarts (2 milliseconds)
+[info] - should preserve timestamps across restarts (3 milliseconds)
+[info] - should handle special characters in file persistence (2 milliseconds)
+[info] - should maintain consistency after multiple operations and restarts (4 milliseconds)
+[info] - should handle concurrent access gracefully (1 millisecond)
+[info] - should recover from corrupted file by starting fresh (2 milliseconds)
+[info] Run completed in 387 milliseconds.
+[info] Total number of tests run: 9
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 9, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 6 s, completed Aug 2, 2025, 10:38:34 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoCLISpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoCLISpec:
+[info] TodoCLI
+
+Usage: todo <command> [options]
+
+Commands:
+  add <description>     Add a new task
+  delete <id>          Delete a task (use partial ID)
+  complete <id>        Mark a task as complete (use partial ID)
+  incomplete <id>      Mark a task as incomplete (use partial ID)
+  list                 List all tasks
+  list --active-only   List only active (incomplete) tasks
+  help                 Show this help message
+
+Examples:
+  todo add "Buy groceries"
+  todo list
+  todo complete abc123
+  todo delete abc123
+        
+[info] - should show help when no arguments provided (47 milliseconds)
+✓ Added task: Test task from CLI
+  ID: edc16b38...
+[info] - should add a task successfully *** FAILED *** (17 milliseconds)
+[info]   "" did not include substring "Added task" (TodoCLISpec.scala:59)
+Error: Task description cannot be empty
+[info] - should handle empty task description in add command *** FAILED *** (1 millisecond)
+[info]   "" did not include substring "Error: Task description cannot be empty" (TodoCLISpec.scala:68)
+No tasks found.
+[info] - should list tasks when no tasks exist *** FAILED *** (3 milliseconds)
+[info]   "" did not include substring "No tasks found" (TodoCLISpec.scala:75)
+✓ Added task: First task
+  ID: 32dcf524...
+✓ Added task: Second task
+  ID: be5c3bf2...
+All Tasks:
+==========
+1. [○] First task (created: 2025-08-02)
+   ID: 32dcf524...
+2. [○] Second task (created: 2025-08-02)
+   ID: be5c3bf2...
+[info] - should list tasks after adding them *** FAILED *** (19 milliseconds)
+[info]   "" did not include substring "All Tasks:" (TodoCLISpec.scala:91)
+✓ Added task: Task to complete
+  ID: 77183a4e...
+[info] - should complete a task successfully *** FAILED *** (3 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$6(TodoCLISpec.scala:101)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+Error: No task found with ID starting with 'nonexistent'
+[info] - should handle completing non-existent task *** FAILED *** (2 milliseconds)
+[info]   "" did not include substring "Error: No task found with ID starting with 'nonexistent'" (TodoCLISpec.scala:117)
+Error: Task ID cannot be empty
+[info] - should handle empty task ID in complete command *** FAILED *** (2 milliseconds)
+[info]   "" did not include substring "Error: Task ID cannot be empty" (TodoCLISpec.scala:124)
+✓ Added task: Task to incomplete
+  ID: e6848fd6...
+[info] - should mark a task as incomplete successfully *** FAILED *** (3 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$10(TodoCLISpec.scala:131)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+Error: No task found with ID starting with 'nonexistent'
+[info] - should handle marking non-existent task as incomplete *** FAILED *** (2 milliseconds)
+[info]   "" did not include substring "Error: No task found with ID starting with 'nonexistent'" (TodoCLISpec.scala:150)
+Error: Task ID cannot be empty
+[info] - should handle empty task ID in incomplete command *** FAILED *** (2 milliseconds)
+[info]   "" did not include substring "Error: Task ID cannot be empty" (TodoCLISpec.scala:157)
+✓ Added task: Task to delete
+  ID: 15564b38...
+[info] - should delete a task successfully *** FAILED *** (3 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$14(TodoCLISpec.scala:164)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+Error: No task found with ID starting with 'nonexistent'
+[info] - should handle deleting non-existent task *** FAILED *** (2 milliseconds)
+[info]   "" did not include substring "Error: No task found with ID starting with 'nonexistent'" (TodoCLISpec.scala:180)
+Error: Task ID cannot be empty
+[info] - should handle empty task ID in delete command *** FAILED *** (1 millisecond)
+[info]   "" did not include substring "Error: Task ID cannot be empty" (TodoCLISpec.scala:187)
+✓ Added task: Active task
+  ID: 1edcf37f...
+✓ Added task: Task to complete
+  ID: 394c956a...
+[info] - should list only active tasks when requested *** FAILED *** (4 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$18(TodoCLISpec.scala:198)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+✓ Added task: Task to complete
+  ID: 48b46ec9...
+[info] - should show no active tasks message when all tasks are completed *** FAILED *** (3 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$20(TodoCLISpec.scala:219)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+Error: Unknown argument 'help'
+Try --help for more information.
+[info] - should show help message for help command *** FAILED *** (5 milliseconds)
+[info]   "" did not include substring "Usage: todo <command>" (TodoCLISpec.scala:237)
+✓ Added task: Buy groceries
+  ID: 4594f571...
+✓ Added task: Write report
+  ID: 0d134c18...
+✓ Added task: Call client
+  ID: 4e958b88...
+[info] - should handle complex workflow *** FAILED *** (5 milliseconds)
+[info]   java.util.NoSuchElementException: None.get
+[info]   at scala.None$.get(Option.scala:627)
+[info]   at scala.None$.get(Option.scala:626)
+[info]   at todo.TodoCLISpec.$anonfun$new$23(TodoCLISpec.scala:257)
+[info]   at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+[info]   at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)
+[info]   at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:22)
+[info]   at org.scalatest.Transformer.apply(Transformer.scala:20)
+[info]   at org.scalatest.flatspec.AnyFlatSpecLike$$anon$5.apply(AnyFlatSpecLike.scala:1832)
+[info]   at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+[info]   ...
+[info] Run completed in 530 milliseconds.
+[info] Total number of tests run: 18
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 1, failed 17, canceled 0, ignored 0, pending 0
+[info] *** 17 TESTS FAILED ***
+[error] Failed tests:
+[error]         todo.TodoCLISpec
+[error] (Test / testOnly) sbt.TestsFailedException: Tests unsuccessful
+[error] Total time: 1 s, completed Aug 2, 2025, 10:38:46 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoCLISpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[error] /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/test/scala/TodoCLISpec.scala:192:1: Unmatched closing brace '}' ignored here
+[error] }
+[error] ^
+[error] one error found
+[error] (Test / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed Aug 2, 2025, 10:40:40 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoCLISpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[error] /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/src/test/scala/TodoCLISpec.scala:101:28: value empty is not a member of TodoCLISpec.this.ResultOfBeWordForAny[List[todo.Task]]
+[error]     updatedTasks should be empty
+[error]                            ^
+[error] one error found
+[error] (Test / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed Aug 2, 2025, 10:41:10 PM
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt "testOnly todo.TodoCLISpec"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] compiling 1 Scala source to /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/target/scala-2.13/test-classes ...
+[info] TodoCLISpec:
+[info] TodoCLI
+✓ Added task: Integration test task
+  ID: 268315c5...
+[info] - should integrate with TodoManager correctly for add command (83 milliseconds)
+No tasks found.
+[info] - should integrate correctly for list command with empty task list (5 milliseconds)
+✓ Added task: First task
+  ID: 0aeeb9a1...
+✓ Added task: Second task
+  ID: 45506c26...
+[info] - should integrate correctly for add and list commands (21 milliseconds)
+✓ Added task: Task to complete
+  ID: d7b2ef7b...
+✓ Marked as complete: Task to complete
+[info] - should integrate correctly for complete command (6 milliseconds)
+✓ Added task: Task to delete
+  ID: d3b4a06e...
+✓ Deleted task: Task to delete
+[info] - should integrate correctly for delete command (6 milliseconds)
+✓ Added task: Task to incomplete
+  ID: 2cf7309a...
+✓ Marked as complete: Task to incomplete
+✓ Marked as incomplete: Task to incomplete
+[info] - should integrate correctly for incomplete command (6 milliseconds)
+Error: Unknown argument 'invalid-command'
+Try --help for more information.
+[info] - should handle command parsing correctly (4 milliseconds)
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ^C
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ echo "Checking if tests completed"
+Checking if tests completed
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ sbt test
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (17 milliseconds)
+[info] - should be created with custom id (0 milliseconds)
+[info] - should be created as completed (0 milliseconds)
+[info] - should be completed correctly (2 milliseconds)
+[info] - should be marked as incomplete correctly (0 milliseconds)
+[info] - should generate correct string representation for incomplete task (5 milliseconds)
+[info] - should generate correct string representation for completed task (1 millisecond)
+[info] - should preserve immutability when completing (1 millisecond)
+[info] - should preserve immutability when marking incomplete (0 milliseconds)
+[info] - should have different ids for different instances (2 milliseconds)
+[info] - should handle empty description (0 milliseconds)
+Warning: Could not load tasks: For input string: "parts"
+✓ Added task: Integration test task
+  ID: dd2639e5...
+No tasks found.
+✓ Added task: First task
+  ID: 3ec19d85...
+✓ Added task: Second task
+  ID: 93932ec9...
+✓ Added task: Task to complete
+  ID: c48c3d05...
+✓ Marked as complete: Task to complete
+✓ Added task: Task to delete
+  ID: cf5b7ea2...
+✓ Deleted task: Task to delete
+✓ Added task: Task to incomplete
+  ID: c3c3f539...
+✓ Marked as complete: Task to incomplete
+✓ Marked as incomplete: Task to incomplete
+Error: Unknown argument 'invalid-command'
+Try --help for more information. 0s
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ^C
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ echo "Checking if sbt is still running"
+Checking if sbt is still running
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./run-tests.sh unit
+🧪 Scala Todo CLI Test Runner
+================================
+Running unit tests only...
+🔄 Running Unit tests...
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (20 milliseconds)
+[info] - should be created with custom id (0 milliseconds)
+[info] - should be created as completed (0 milliseconds)
+[info] - should be completed correctly (1 millisecond)
+[info] - should be marked as incomplete correctly (1 millisecond)
+[info] - should generate correct string representation for incomplete task (4 milliseconds)
+[info] - should generate correct string representation for completed task (1 millisecond)
+[info] - should preserve immutability when completing (0 milliseconds)
+[info] - should preserve immutability when marking incomplete (0 milliseconds)
+[info] - should have different ids for different instances (2 milliseconds)
+[info] - should handle empty description (0 milliseconds)
+[info] Run completed in 338 milliseconds.
+[info] Total number of tests run: 11
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 10:42:39 PM
+✅ Unit tests passed!
+
+🔄 Running Unit tests...
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoManagerSpec:
+[info] TodoManager
+[info] - should start with empty task list (16 milliseconds)
+[info] - should add a task successfully (15 milliseconds)
+[info] - should add multiple tasks (16 milliseconds)
+[info] - should delete a task by full id (1 millisecond)
+[info] - should return false when deleting non-existent task (0 milliseconds)
+[info] - should complete a task successfully (1 millisecond)
+[info] - should return None when completing non-existent task (0 milliseconds)
+[info] - should mark a completed task as incomplete (1 millisecond)
+[info] - should return None when marking non-existent task as incomplete (0 milliseconds)
+[info] - should list all tasks including completed ones (5 milliseconds)
+[info] - should list only active tasks when requested (2 milliseconds)
+[info] - should find task by full id (1 millisecond)
+[info] - should find task by partial id (0 milliseconds)
+[info] - should return None when finding non-existent task (1 millisecond)
+[info] - should handle multiple tasks with similar id prefixes (1 millisecond)
+[info] - should maintain task order (2 milliseconds)
+[info] - should handle empty description (1 millisecond)
+[info] - should handle special characters in description (1 millisecond)
+[info] - should persist state across multiple operations (5 milliseconds)
+[info] Run completed in 426 milliseconds.
+[info] Total number of tests run: 19
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 19, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 10:42:45 PM
+✅ Unit tests passed!
+
+🎉 Test execution completed!
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./run-tests.sh integration
+🧪 Scala Todo CLI Test Runner
+================================
+Running integration tests only...
+🔄 Running Integration tests...
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoManagerIntegrationSpec:
+[info] TodoManager
+[info] - should persist tasks to file and reload them (44 milliseconds)
+[info] - should handle empty file gracefully (2 milliseconds)
+Warning: Could not load tasks: For input string: "parts"
+[info] - should handle malformed file data gracefully (3 milliseconds)
+[info] - should preserve task IDs across restarts (1 millisecond)
+[info] - should preserve timestamps across restarts (1 millisecond)
+[info] - should handle special characters in file persistence (1 millisecond)
+[info] - should maintain consistency after multiple operations and restarts (6 milliseconds)
+[info] - should handle concurrent access gracefully (1 millisecond)
+[info] - should recover from corrupted file by starting fresh (1 millisecond)
+[info] Run completed in 381 milliseconds.
+[info] Total number of tests run: 9
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 9, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 1 s, completed Aug 2, 2025, 10:42:59 PM
+✅ Integration tests passed!
+
+🎉 Test execution completed!
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./run-tests.sh cli
+🧪 Scala Todo CLI Test Runner
+================================
+Running CLI tests only...
+🔄 Running CLI tests...
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TodoCLISpec:
+[info] TodoCLI
+✓ Added task: Integration test task
+  ID: fa4eb4f2...
+[info] - should integrate with TodoManager correctly for add command (72 milliseconds)
+No tasks found.
+[info] - should integrate correctly for list command with empty task list (4 milliseconds)
+✓ Added task: First task
+  ID: a5230677...
+✓ Added task: Second task
+  ID: 8b194478...
+[info] - should integrate correctly for add and list commands (18 milliseconds)
+✓ Added task: Task to complete
+  ID: f781db41...
+✓ Marked as complete: Task to complete
+[info] - should integrate correctly for complete command (4 milliseconds)
+✓ Added task: Task to delete
+  ID: a7d2f8c9...
+✓ Deleted task: Task to delete
+[info] - should integrate correctly for delete command (7 milliseconds)
+✓ Added task: Task to incomplete
+  ID: 1b7b7502...
+✓ Marked as complete: Task to incomplete
+✓ Marked as incomplete: Task to incomplete
+[info] - should integrate correctly for incomplete command (8 milliseconds)
+Error: Unknown argument 'invalid-command'
+Try --help for more information.
+[info] - should handle command parsing correctly (4 milliseconds)
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+✅ CLI tests passed!
+  | => src / Test / testOnly 0s
+🎉 Test execution completed!
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ ./run-tests.sh all
+🧪 Scala Todo CLI Test Runner
+================================
+Running all tests...
+🔄 Running All tests...
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+[info] TaskSpec:
+[info] A Task
+[info] - should be created with default values (21 milliseconds)
+[info] - should be created with custom id (1 millisecond)
+[info] - should be created as completed (1 millisecond)
+[info] - should be completed correctly (1 millisecond)
+[info] - should be marked as incomplete correctly (0 milliseconds)
+[info] - should generate correct string representation for incomplete task (4 milliseconds)
+[info] - should generate correct string representation for completed task (1 millisecond)
+[info] - should preserve immutability when completing (1 millisecond)
+[info] - should preserve immutability when marking incomplete (0 milliseconds)
+[info] - should have different ids for different instances (2 milliseconds)
+[info] - should handle empty description (0 milliseconds)
+Warning: Could not load tasks: For input string: "parts"
+✓ Added task: Integration test task
+  ID: 0f7e0a20...
+No tasks found.
+✓ Added task: First task
+  ID: 81f86fa6...
+✓ Added task: Second task
+  ID: c11ab4f3...
+✓ Added task: Task to complete
+  ID: bdd61088...
+✓ Marked as complete: Task to complete
+✓ Added task: Task to delete
+  ID: 3dba4afd...
+✓ Deleted task: Task to delete
+✓ Added task: Task to incomplete
+  ID: 6698fad1...
+✓ Marked as complete: Task to incomplete
+✓ Marked as incomplete: Task to incomplete
+Error: Unknown argument 'invalid-command'
+Try --help for more information. 0s
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+✅ All tests passed!
+  | => src / Test / executeTests 0s
+🎉 Test execution completed!
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ timeout 30 sbt "Test/testQuick"
+[info] welcome to sbt 1.11.3 (Ubuntu Java 11.0.28)
+[info] loading settings for project src-build from plugins.sbt...
+[info] loading project definition from /home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/project
+[info] loading settings for project src from build.sbt...
+[info] set current project to scala-todo-cli (in build file:/home/chuan/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src/)
+Warning: Could not load tasks: For input string: "parts"
+✓ Added task: Integration test task
+  ID: 185dd894...
+No tasks found.
+✓ Added task: First task
+  ID: ffbae557...
+✓ Added task: Second task
+  ID: d425d526...
+✓ Added task: Task to complete
+  ID: 1f90db62...
+✓ Marked as complete: Task to complete
+✓ Added task: Task to delete
+  ID: 27c7d30e...
+✓ Deleted task: Task to delete
+✓ Added task: Task to incomplete
+  ID: d3d0072d...
+✓ Marked as complete: Task to incomplete
+✓ Marked as incomplete: Task to incomplete
+Error: Unknown argument 'invalid-command'
+Try --help for more information.
+Scala CLI ToDo Application 0.1.0
+Usage: todo [add|delete|complete|incomplete|list] [options] <args>...
+
+Command: add description
+Add a new task
+  description              Task description
+Command: delete id
+Delete a task
+  id                       Task ID (can be partial)
+Command: complete id
+Mark a task as complete
+  id                       Task ID (can be partial)
+Command: incomplete id
+Mark a task as incomplete
+  id                       Task ID (can be partial)
+Command: list [options]
+List all tasks
+  --active-only            Show only active (incomplete) tasks
+  --help                   Show this help message
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src
+chuan@chuan2025:~/Documents/My_Study/AI/ai-code-generation-challenges/challenges-01_build-a-ToDo-App/src$ 
