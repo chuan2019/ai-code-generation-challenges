@@ -1,40 +1,40 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TaskSpec, org.scalatest.tools.Framework$$anon$1@4e2d79c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TaskSpec, org.scalatest.tools.Framework$$anon$1@b4833e7, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTaskSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mA Task[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be created with default values (20 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be created with default values (17 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be created with custom id (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be created as completed (0 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be completed correctly (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be completed correctly (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be marked as incomplete correctly (0 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for incomplete task (5 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for completed task (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for incomplete task (4 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for completed task (2 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should preserve immutability when completing (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should preserve immutability when marking incomplete (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should have different ids for different instances (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should handle empty description (0 milliseconds)[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TodoManagerSpec, org.scalatest.tools.Framework$$anon$1@4e2d79c9, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TodoManagerSpec, org.scalatest.tools.Framework$$anon$1@b4833e7, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoManagerSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTodoManager[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should start with empty task list (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should add a task successfully (4 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should add multiple tasks (14 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should delete a task by full id (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should add multiple tasks (12 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should delete a task by full id (2 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return false when deleting non-existent task (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should complete a task successfully (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return None when completing non-existent task (0 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return None when completing non-existent task (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should mark a completed task as incomplete (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return None when marking non-existent task as incomplete (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should list all tasks including completed ones (5 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should list only active tasks when requested (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should list only active tasks when requested (2 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should find task by full id (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should find task by partial id (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return None when finding non-existent task (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should handle multiple tasks with similar id prefixes (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should maintain task order (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should handle empty description (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should handle special characters in description (0 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should persist state across multiple operations (2 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 408 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle special characters in description (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should persist state across multiple operations (4 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 389 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 30[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 30, failed 0, canceled 0, ignored 0, pending 0[0m[0m

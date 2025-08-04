@@ -1,15 +1,15 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TaskSpec, org.scalatest.tools.Framework$$anon$1@b40d79d, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.TaskSpec, org.scalatest.tools.Framework$$anon$1@2626a567, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTaskSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mA Task[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be created with default values (21 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be created with default values (15 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be created with custom id (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should be created as completed (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be created as completed (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be completed correctly (1 millisecond)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should be marked as incomplete correctly (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for incomplete task (4 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for completed task (1 millisecond)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should preserve immutability when completing (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should generate correct string representation for completed task (0 milliseconds)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should preserve immutability when completing (0 milliseconds)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should preserve immutability when marking incomplete (0 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should have different ids for different instances (2 milliseconds)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should handle empty description (0 milliseconds)[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.AllTestSuite, org.scalatest.tools.Framework$$anon$1@b40d79d, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have different ids for different instances (1 millisecond)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should handle empty description (1 millisecond)[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(todo.AllTestSuite, org.scalatest.tools.Framework$$anon$1@2626a567, false, [SuiteSelector])[0m
