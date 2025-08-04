@@ -61,6 +61,49 @@
 
 **Status**: ✅ Complete - Virtual environment configured and working
 
+---
+
+#### Iteration 3: Ball Physics and Randomly Positioned Bricks
+
+**Objective**: Add a moving ball with physics and randomly arranged destructible bricks
+
+**Implementation**:
+- **Ball Physics**:
+  - Added ball that starts at screen center and moves diagonally
+  - Implemented collision detection with all window edges
+  - Ball bounces realistically off walls while maintaining constant speed
+  - Ball position is constrained to stay within window boundaries
+
+- **Brick System**:
+  - Created 40 randomly positioned colorful bricks in the upper half of screen
+  - Each brick has random color from 7-color palette (red, green, blue, yellow, magenta, cyan, orange)
+  - Bricks are sized 60x20 pixels with proper spacing margins
+  - Added white borders around bricks for better visibility
+
+- **Collision Detection**:
+  - Implemented precise ball-to-brick collision detection using pygame rectangles
+  - When ball hits a brick, the brick "explodes" (disappears from screen)
+  - Smart collision response determines hit direction and bounces ball accordingly
+  - Ball direction changes based on which side of brick was hit (horizontal vs vertical)
+
+**Technical Details**:
+- Used `pygame.Rect.colliderect()` for accurate collision detection
+- Brick data structure stores position, size, color, and collision rectangle
+- Safe iteration over brick list during collision to prevent runtime errors
+- Ball collision response considers relative positions for realistic physics
+
+**Files Modified**:
+- `src/breakout.py` - Enhanced with ball physics and brick system
+
+**Game Features Added**:
+- ✅ Bouncing ball with realistic physics
+- ✅ 40 randomly positioned colorful bricks
+- ✅ Brick destruction on collision
+- ✅ Smart collision response system
+- ✅ Visual brick borders for clarity
+
+**Status**: ✅ Complete - Core breakout gameplay mechanics implemented
+
 
 
 
