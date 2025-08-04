@@ -1,7 +1,7 @@
 # AI Code Challenge #1
 ## Scala CLI ToDo Application
 
-**Tool**: Github Copilot in VS Code
+**Tool**: Github Copilot (`agent` mode with `Claude Sonnet 4`) in VS Csode
 
 ### Project Setup
 
