@@ -40,6 +40,18 @@ Implement the **Wave Function Collapse algorithm** to create a procedural conten
 
 **Tech Stack:** TBD (to be determined based on AI recommendations)
 
+### [Challenge #4 - Real-time 3D Renderer](./challenges-04/)
+Build a **simple real-time 3D renderer with a floating object and movable light** using an LLM as your coding partner.
+
+**Key Features:**
+- Animated floating sphere (sine wave motion)
+- Interactive point light source
+- Real-time lighting and shading
+- Interactive light movement (gizmo/keys/UI)
+- Optional: Multiple lights, custom shaders
+
+**Tech Stack:** Rust + Bevy, Go + Ebiten, Python + moderngl, JavaScript + Three.js, or C++ + OpenGL
+
 ---
 
 ## Getting Started
